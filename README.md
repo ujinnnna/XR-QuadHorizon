@@ -10,7 +10,7 @@
 🧊 **티저 영상**
 <p align="center">
   <a href="https://www.youtube.com/watch?v=debY9wHJSrs" target="_blank">
-    <img src="https://img.youtube.com/vi/debY9wHJSrs/0.jpg" width="600" alt="Quad Horizon XR Demo"/>
+    <img src="https://img.youtube.com/vi/debY9wHJSrs/0.jpg" width="500" alt="Quad Horizon XR Demo"/>
   </a>
 </p>
 
@@ -67,7 +67,7 @@
 | 🦠 Parasite | Low(파랑), High(빨강) | WaveOrb (광역 스턴) | Wave Orb 애니메이션 |
 | 👹 Mutant | 4종류 (체력 상이) | Spear (찌르기 무기) | 몰입감 |
 
-<img src="./images/Horizon.gif" alt="Map Portals Preview" width="800"/>
+<img src="./images/horizon.gif" alt="Map Portals Preview" width="700"/>
 
 ---
 
