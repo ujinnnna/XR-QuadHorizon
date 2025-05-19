@@ -49,7 +49,7 @@
 
 4. **전투 맵 (BattleMap)**  
    - MR 배경 위에서 **DestructibleMesh.cs**를 통해 벽이 단계적으로 파괴  
-   - AI 적들이 등장하며 전투 시작  
+   - 적들이 등장하며 전투 시작  
    - 각 맵마다 특수 무기(왼손 컨트롤러) 사용 가능  
 
 5. **스테이지 완료**  
@@ -63,11 +63,15 @@
 | 맵 이름 | 적 유형 | 특수 무기 | 특징 |
 |--------|--------|----------|----------|
 | 🦖 Dinosaur Map | T-Rex, Raptor | Flashlight (안개 뚫기) | 안개 구현 |
-| ⚔️ SciWarrior | Blue (연발), Red (단발) | Sci-Shield (총알 방어) | 적 WayPorint, 재장전 |
+| ⚔️ SciWarrior | Blue (연발), Red (단발) | Sci-Shield (총알 방어) | 적 WayPoint, 재장전 |
 | 🦠 Parasite | Low(파랑), High(빨강) | WaveOrb (광역 스턴) | Wave Orb 애니메이션 |
 | 👹 Mutant | 4종류 (체력 상이) | Spear (찌르기 무기) | 몰입감 |
 
+<img src="./images/Horizon.gif" alt="Map Portals Preview" width="800"/>
+
 ---
+
+
 
 ## 🛠 기술 스택 및 구현 요소
 
@@ -78,7 +82,7 @@
 | **Meta Audio SDK** | 공간 음향 구현 (공간 너머 적 위치 파악 가능) |
 | **Meta Haptics Studio** | 손 컨트롤러 진동 피드백 커스터마이징 |
 | **Stencil Mask Shader** | 윈도우 내부 맵 미리보기 표현 |
-| **ScriptableObject** | 적 개체 및 속성 정의 (속도, 체력, 공격 방식 등) |
+| **ScriptableObject** | 적 개체 및 속성 정의 (속도, 체력 등) |
 | **NavMeshAgent** | AI 적 이동 경로 설정 |
 | **Object Pooling** | 총알, 이펙트 등 생성/소멸 객체 최적화 |
 | **DestructibleMesh.cs** | 벽 파괴 시퀀스 및 시각 이펙트 |
@@ -92,7 +96,7 @@
 
 ---
 
-## 🧠 적 캐릭터 설계 (ScriptableObject)
+## 🍥 적 캐릭터 설계 (ScriptableObject)
 
 - 리소스 폴더에서 개별 적 유형별 데이터 관리  
 - 각 적 스폰 시 해당 SO를 통해 인스턴스화 및 자동 속성 설정
@@ -116,7 +120,7 @@
 - DestructibleMeshRandom.cs를 통해 공간 파괴
 
 ---
-## 📁 03.Scripts
+## 📁 Scripts
 
 ### 🔉 Audio
 
@@ -136,7 +140,7 @@
 ### 👾 Enemy
 
 **BaseEnemy.cs**  
-- 추상 클래스. 모든 적이 상속.  
+- 추상 클래스. 적이 상속.  
 - HP, NavMeshAgent 기반 이동, 데미지 처리.  
 - 사망시 애니메이션 및 오브젝트 풀 반환.  
 
@@ -170,7 +174,6 @@
 **Enemy_SciWarrior.cs**  
 - 경로 이동 → 조준 → 슈팅.  
 - 사망 / 재장전 / 공격 애니메이션 동기화.  
-- 슛 카운터 구현.  
 
 **SciWarrior_Bullet.cs**  
 - 총알 생명 주기 관리.  
@@ -184,7 +187,7 @@
 #### 📂 Parasite
 
 **ParasiteData.cs**  
-- 적 타입별 (높은/낮은) 속성 포함.  
+- 적 타입별 (High/Low) 속성 포함.  
 
 **Enemy_Parasite.cs**  
 - 무작위 간격으로 총알 발사 코루틴 실행.  
@@ -199,15 +202,14 @@
 - 총알 충돌 시 체력 감소/이펙트 발생.  
 
 **Parasite_Shooting.cs**  
-- WaveOrb 관련 적 공격 구현.  
-- 방향, 위치 제어 및 오브젝트 풀링 사용.  
+- 적 공격 구현.  
+- 방향, 위치 제어 
 
 #### 📂 Mutant
 
 **Enemy_Mutant.cs**  
 - 다양한 체력의 4종 적 구현.  
 - 창이나 총알에 맞으면 반응.  
-- 근접 시 자동 공격 타이머 실행.  
 
 ---
 
@@ -269,7 +271,7 @@
 
 **EffectMeshHandler.cs**  
 - 메시 색상 시간에 따라 변화 (PingPong).  
-- 블랙 ↔ 블루로 부드러운 전환 구현.  
+- 부드러운 전환 구현.  
 
 ---
 
@@ -293,7 +295,7 @@
 - 타격 충돌 시 데미지 처리.  
 
 **WaveOrb.cs**  
-- Parasite맵 전용 파동 무기.  
+- Parasite맵 전용 파동.  
 - Lerp 애니메이션, 범위 내 적 정지.  
 
 ---
