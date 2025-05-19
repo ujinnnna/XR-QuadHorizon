@@ -7,11 +7,14 @@
 
 ## 🎥 프로젝트 시연 영상
 
+🧊 **티저 영상**
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=[YourVideoID]" target="_blank">
-    <img src="https://img.youtube.com/vi/[YourVideoID]/0.jpg" width="600" alt="Quad Horizon XR Demo"/>
+  <a href="https://www.youtube.com/watch?v=debY9wHJSrs" target="_blank">
+    <img src="https://img.youtube.com/vi/debY9wHJSrs/0.jpg" width="600" alt="Quad Horizon XR Demo"/>
   </a>
 </p>
+
+🫟 **풀 플레이 영상**: [https://youtu.be/J3Z4Ba6C6ik](https://youtu.be/J3Z4Ba6C6ik)
 
 ---
 
@@ -32,8 +35,8 @@
 ## 🧩 콘텐츠 플로우
 
 1. **Intro 씬**  
-   - 프로젝트 로고 노출 및 초기화  
-   - `Indicator.cs` 실행 → 트리거 입력 시 **QuadHorizon 포털 박스** 생성  
+   - 프로젝트 로고 생성
+   - Indicator 실행 → 트리거 입력 시 **QuadHorizon** 생성  
    
 2. **Quad Horizon 씬**  
    - 4개의 맵 포털(Dinosaur / SciWarrior / Parasite / Mutant) 노출  
@@ -41,10 +44,10 @@
    - 플레이어가 가까이 접근 시 해당 맵의 `PlayButton` 활성화
 
 3. **로딩 씬 (LoadingScene)**  
-   - `SceneLoader.cs`에서 **비동기 AsyncOperation**으로 다음 전투 씬 로드  
+   - LoadingScene에서 **비동기 AsyncOperation**으로 다음 전투 씬 로드  
    - `progress >= 0.9f` 도달 시 자동 전환
 
-4. **전투 씬 (BattleScene)**  
+4. **전투 맵 (BattleMap)**  
    - MR 배경 위에서 **DestructibleMesh.cs**를 통해 벽이 단계적으로 파괴  
    - AI 적들이 등장하며 전투 시작  
    - 각 맵마다 특수 무기(왼손 컨트롤러) 사용 가능  
@@ -59,9 +62,9 @@
 
 | 맵 이름 | 적 유형 | 특수 무기 | 특징 |
 |--------|--------|----------|----------|
-| 🦖 Dino Map | T-Rex, Raptor | Flashlight (안개 뚫기) | 안개 구현 |
+| 🦖 Dinosaur Map | T-Rex, Raptor | Flashlight (안개 뚫기) | 안개 구현 |
 | ⚔️ SciWarrior | Blue (연발), Red (단발) | Sci-Shield (총알 방어) | 적 WayPorint, 재장전 |
-| 🦠 Parasite | Low(파란), High(빨간) | WaveOrb (광역 스턴) | 자연스러운 이동 |
+| 🦠 Parasite | Low(파랑), High(빨강) | WaveOrb (광역 스턴) | Wave Orb 애니메이션 |
 | 👹 Mutant | 4종류 (체력 상이) | Spear (찌르기 무기) | 몰입감 |
 
 ---
@@ -108,9 +111,9 @@
 
 ## 👁️ MR-VR 환경 전환
 
-- 기본적으로 **Passthrough MR 환경**에서 시작  
-- **Horizon 진입 → BattleScene**에서는 VR 환경 전환  
-- 각 맵의 Immersion을 높이기 위한 **환경 이펙트별 변화 제공**
+- **Passthrough MR 환경**에서 시작  
+- **Horizon 진입 → BattleScene**에서는 VR 환경 전환
+- DestructibleMeshRandom.cs를 통해 공간 파괴
 
 ---
 ## 📁 03.Scripts
@@ -221,7 +224,6 @@
 - 상황별 햅틱 클립 등록.  
 
 **IndicatorManager.cs**  
-- VR 컨트롤러 레이캐스트로 인디케이터 위치 표시.  
 - 트리거 누르면 해당 위치에 QuadHorizon 생성.  
 
 **InfoUIManager.cs**  
@@ -324,7 +326,6 @@
 
 - **이름**: 나우진  
 - **이메일**: [uujin314@icloud.com](mailto:uujin314@icloud.com)  
-- **역할**: 전체 기획 / 시스템 설계 / XR 인터랙션 / 모델링 / 최적화
 
 ---
 
@@ -334,5 +335,4 @@
 > **현실 공간과 가상의 전투 환경을 연결하고**,  
 > **맵에 따라 다른 몰입/전략/인터랙션을 제공하는 XR 콘텐츠의 확장 실험**입니다.
 
-1인 개발 프로젝트로 **디자인 → 시스템 아키텍처 → XR 환경 최적화 → AI 적 설정**까지 직접 구현하였으며,  
-**컨트롤러 기반 상호작용과 MR-VR 전환의 자연스러운 연결**을 중점으로 기술적 완성도를 높였습니다.
+1인 개발 프로젝트로 **컨트롤러 기반 상호작용과 MR-VR 전환의 자연스러운 연결**을 중점으로 기술적 완성도를 높였습니다.
