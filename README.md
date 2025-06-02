@@ -85,11 +85,11 @@
 | **ScriptableObject** | 적 개체 및 속성 정의 (속도, 체력 등) |
 | **NavMeshAgent** | AI 적 이동 경로 설정 |
 | **Object Pooling** | 총알, 이펙트 등 생성/소멸 객체 최적화 |
-| **DestructibleMesh.cs** | 벽 파괴 시퀀스 및 시각 이펙트 |
+| **DestructibleMeshRandom.cs** | 벽 파괴 시퀀스 및 시각 이펙트 |
 | **SceneLoader.cs** | 비동기 씬 로딩 및 전환 처리 |
-| **Indicator.cs** | 시작 트리거 및 QuadHorizon 생성 |
-| **MapTrigger.cs** | 윈도우 접근 시 PlayButton 활성화 |
-| **WeaponController.cs** | 오른손 총기 고정, 왼손 특수무기 처리 |
+| **IndicatorManager.cs** | 시작 트리거 및 QuadHorizon 생성 |
+| **QuadHorizonTrigger.cs** | 윈도우 접근 시 PlayButton 활성화 |
+| **Weapon.cs** | 오른손 총기 고정, 왼손 특수무기 처리 |
 | **EnemyManager.cs** | 적 스폰, 행동, 제거 처리 통합 관리 |
 | **AudioManager.cs** | 싱글톤 기반 효과음 관리 |
 | **UIManager.cs** | Stage Clear, PlayButton, Fade 등 UI 제어 |
@@ -116,7 +116,6 @@
 ## 👁️ MR-VR 환경 전환
 
 - **Passthrough MR 환경**에서 시작  
-- **Horizon 진입 → BattleScene**에서는 VR 환경 전환
 - DestructibleMeshRandom.cs를 통해 공간 파괴
 
 ---
