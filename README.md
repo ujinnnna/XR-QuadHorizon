@@ -20,7 +20,7 @@
 | **개발 기간** | 2024.12.28 – 2025.04.29 |
 | **디바이스** | **Meta Quest 3** (MR Passthrough) |
 | **엔진 & 환경** | **Unity (URP)**, **Meta XR SDK**, C# |
-| **핵심 기술** | MR-VR 전환, Stencil Mask Shader, Meta Haptics, Object Pooling |
+| **핵심 기술** | MR-VR 전환, Stencil Mask Shader, Meta Haptics, Object Pooling, 전투 시스템, 스크립터블 오브젝트 |
 | **개발자** | 나우진 (1인 개발) |
 
 ---
