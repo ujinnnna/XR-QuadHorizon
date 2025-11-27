@@ -60,10 +60,10 @@
 
 | 맵 (Theme) | 주요 적 (Enemy) | 핵심 기믹 (Mechanic) | 플레이 전략 |
 | :--- | :--- | :--- | :--- |
-| **🦖 Dinosaur** | T-Rex, Raptor | **Spatial Audio & Fog** | 안개로 인한 시야 제한 속에서 **3D 공간 음향**에 의존하여 적의 위치를 파악해야 합니다. |
-| **⚔️ SciWarrior** | Turrets | **NavMesh & Shield** | 적들의 경로(NavMesh)를 파악하고 공격해야 합니다. |
-| **🦠 Parasite** | Parasites | **AOE (광역 공격)** | 랜덤 패턴으로 몰려오는 적들을 광역 스턴 무기(`WaveOrb`)로 제압해야 합니다. |
-| **👹 Mutant** | Mutants | **Proximity Combat** | 다양한 체력을 가진 변종들이 접근해오며, 근접 무기(`Spear`)를 사용해 공격해야 합니다. |
+| **Dinosaur** | T-Rex, Raptor | **Spatial Audio & Fog** | 안개로 인한 시야 제한 속에서 **3D 공간 음향**에 의존하여 적의 위치를 파악해야 합니다. |
+| **SciWarrior** | Turrets | **NavMesh & Shield** | 적들의 경로(NavMesh)를 파악하고 공격해야 합니다. |
+| **Parasite** | Parasites | **AOE (광역 공격)** | 랜덤 패턴으로 몰려오는 적들을 광역 스턴 무기(`WaveOrb`)로 제압해야 합니다. |
+| **Mutant** | Mutants | **Proximity Combat** | 다양한 체력을 가진 변종들이 접근해오며, 근접 무기(`Spear`)를 사용해 공격해야 합니다. |
 
 ---
 
