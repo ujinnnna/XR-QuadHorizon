@@ -21,7 +21,7 @@
 
 ---
 
-## ⚙️ Project Summary
+##  Project Summary
 
 | 항목 | 상세 내용 |
 | :--- | :--- |
@@ -34,7 +34,7 @@
 
 ---
 
-## ✨ Core Technical Contributions
+##  Core Technical Contributions
 
 ### 1.  MR-VR Destruct Transition
 - **구현 방식**: **Stencil Mask Shader**와 `DestructibleMesh.cs` 활용.
@@ -54,7 +54,7 @@
 
 ---
 
-## 🗺️ Battle Maps & Strategy
+##  Battle Maps & Strategy
 
 4개의 포털은 각각 다른 테마와 공략법을 요구합니다.
 
@@ -67,7 +67,7 @@
 
 ---
 
-## 💻 Key Scripts & Architecture
+##  Key Scripts & Architecture
 
 유지보수와 확장성을 고려하여 **모듈화된 C# 스크립트**로 제작했습니다.
 
@@ -81,7 +81,7 @@
 
 ---
 
-## 🙋 Developer
+##  Developer
 
 <div align="left">
   <strong>나우진 (Woojin Na)</strong>
